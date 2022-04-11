@@ -25,7 +25,7 @@ export default function Header() {
         </Link>
         <button
           onClick={handleWalletConnect}
-          className="bg-purple-600 text-xl text-white rounded-full py-2 px-4 ml-8"
+          className="border border-gray-500 text-xl text-transparent bg-clip-text bg-gradient-to-br from-white to-grd-blue rounded-full py-2 px-4 ml-8"
         >
           Connect Wallet
         </button>
