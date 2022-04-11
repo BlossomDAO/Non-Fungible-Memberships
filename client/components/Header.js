@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../assets/logo.svg";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "../public/logo.svg";
 
 export default function Header() {
   const handleWalletConnect = () => {
@@ -9,18 +10,18 @@ export default function Header() {
   };
   return (
     <div className="flex flex-row justify-between items-center m-4">
-      <Link to="/">
-        <img className="h-16" src={Logo} alt="" />
+      <Link href="/">
+        <Image src={Logo} alt="NFM Logo" height={100} />
       </Link>
       <div>
-        <Link className="ml-8 text-white text-xl" to="/how-it-works">
-          How It Works
+        <Link href="/how-it-works">
+          <a className="ml-8 text-white text-xl"> How It Works</a>
         </Link>
-        <Link className="ml-8 text-white text-xl" to="/explore">
-          Explore
+        <Link href="/explore">
+          <a className="ml-8 text-white text-xl"> Explore</a>
         </Link>
-        <Link className="ml-8 text-white text-xl" to="/borrow">
-          Borrow
+        <Link href="/borrow">
+          <a className="ml-8 text-white text-xl"> Borrow</a>
         </Link>
         <button
           onClick={handleWalletConnect}
