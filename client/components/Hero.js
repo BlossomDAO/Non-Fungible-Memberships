@@ -11,10 +11,10 @@ export default function Hero() {
           NFM (Non-Fungible Memberships) are a smarter way to lend & rent NFT’s!
         </p>
         <div className="flex flex-row justify-between py-8">
-          <button className="bg-zinc-900 text-white font-mono text-2xl px-4 py-2 border-zinc-900 rounded">
+          <button className=" bg-gradient-to-r from-grd-ltBlue to-grd-blue text-gray-800 font-mono text-2xl px-4 py-2 rounded-full">
             Explore NFTs
           </button>
-          <button className="bg-zinc-900 text-white font-mono text-2xl px-4 py-2 border-zinc-900 rounded">
+          <button className=" text-white font-mono text-2xl px-4 py-2 rounded-full border border-grd-ltBlue hover:border-grd-blue ">
             Borrow your NFT
           </button>
         </div>
