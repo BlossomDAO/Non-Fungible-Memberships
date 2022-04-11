@@ -14,7 +14,7 @@ export default function Header() {
         <Image src={Logo} alt="NFM Logo" height={100} />
       </Link>
       <div>
-        <Link href="/HowItWorks">
+        <Link href="/how-it-works">
           <a className="ml-8 text-white text-xl"> How It Works</a>
         </Link>
         <Link href="/explore">
