@@ -13,7 +13,7 @@ export default function NFTCard({nftImage, nftDesc, owner, ownerImg, rentBtn}) {
       <Image src={nftImage} alt='NFT image'  />
       <div className={styles.contentContainer}>
         <div className={styles.contentBox}>
-          <div className='flex justify-around'>
+          <div className='flex justify-between'>
            { ownerImg &&
            <Image src={ownerImg} alt='user image' width={'35px'} height={'35px'} layout="fixed" />
            }

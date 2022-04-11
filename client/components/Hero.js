@@ -15,7 +15,7 @@ const nftInfo = {
 
 export default function Hero() {
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center w-full">
+    <div className="flex flex-col sm:flex-row px-0 sm:px-2 justify-between items-center w-full py-24">
       <div className="flex flex-col pr-16">
         <h1 className="font-mono text-6xl text-white mb-6">Borrow An NFT</h1>
         <p className="font-mono text-xl text-white">
