@@ -5,7 +5,7 @@ import Header from "./Header";
 export default function Layout({ children }) {
   return (
     <div className="min-h-screen min-w-screen  bg-stone-700">
-      <div className="flex flex-col max-w-5xl mx-auto min-h-screen ">
+      <div className="flex flex-col max-w-6xl mx-auto min-h-screen ">
         <Header />
         <div className="flex flex-grow">{children}</div>
         <Footer />
