@@ -28,11 +28,11 @@ export default function Explore() {
           <h1 className="text-center text-white text-3xl my-16">
             Wanna see some of these in your wallet?
           </h1>
-          <div className="flex justify-center py-8">
+          <div className="flex flex-wrap justify-center py-8">
             {categories.map((c) => (
               <Button
                 onClick={() => handleFilter(c)}
-                className='mr-2'
+                className='mr-2 mb-2'
                 variant={
                   filterBy === c
                     ? "gradient"
