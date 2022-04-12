@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-export default function Borrow() {
+export default function Rent() {
   return (
     <Layout>
-      <div>Borrow</div>
+      <div>Rent</div>
     </Layout>
   );
 }

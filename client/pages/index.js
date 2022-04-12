@@ -15,9 +15,9 @@ export default function Home() {
         </p>
         <h2 className="text-[2.5rem] md:text-5xl text-gray-200">Trending Rentals</h2>
         <div className="grid grid-flow-col overflow-scroll scrollbar-hide xl:grid xl:grid-cols-4 gap-x-10 gap-y-5">
-          <NFTCard title="NFT Title" price="0.55 Eth" />
-          <NFTCard title="NFT Title" price="0.75 Eth" />
-          <NFTCard title="NFT Title" price="0.85 Eth" />
+          <NFTCard title="Structured Randomness" price="0.55 Eth" />
+          <NFTCard title="Doodle #7568" price="0.75 Eth" />
+          <NFTCard title="CryptoPunk #6764" price="0.85 Eth" />
           <NFTCard title="NFT Title" price="0.95 Eth" />
         </div>
       </div>

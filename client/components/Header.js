@@ -22,10 +22,10 @@ export default function Header() {
           <a className="ml-8 text-white text-xl"> How It Works</a>
         </Link>
         <Link href="/explore">
-          <a className="ml-8 text-white text-xl"> Explore</a>
+          <a className="ml-8 text-white text-xl">Explore</a>
         </Link>
-        <Link href="/borrow">
-          <a className="ml-8 text-white text-xl"> Borrow</a>
+        <Link href="/rent">
+          <a className="ml-8 text-white text-xl">Rent</a>
         </Link>
         <button
           onClick={handleWalletConnect}
