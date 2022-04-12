@@ -70,7 +70,7 @@ export default function Explore() {
       {!nftsForRent && (
         <div className="min-w-full min-h-full flex flex-col justify-center">
           <h1 className="text-center text-white text-3xl mb-16">
-            Ooops... Looks like there are no NFTs available to borrow. Please
+            Ooops... Looks like there are no NFTs available to rent. Please
             check back later or consider listing your NFT for others.
           </h1>
           <button className=" bg-gradient-to-r from-grd-ltBlue to-grd-blue text-gray-800 font-mono text-2xl px-4 py-2 rounded-full">
