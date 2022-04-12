@@ -5,7 +5,6 @@ import { dummyData, categories } from "@content/dummyNFT";
 import Button from "@components/button";
 
 export default function Explore() {
-
   const [filterBy, setFilterBy] = useState("");
   const [nftData, setNFTData] = useState(dummyData);
 
@@ -32,12 +31,8 @@ export default function Explore() {
             {categories.map((c) => (
               <Button
                 onClick={() => handleFilter(c)}
-                className='mr-2 mb-2'
-                variant={
-                  filterBy === c
-                    ? "gradient"
-                    : "outline"
-                }
+                className="mr-2 mb-2"
+                variant={filterBy === c ? "gradient" : "outline"}
               >
                 {c}
               </Button>
@@ -61,8 +56,8 @@ export default function Explore() {
       {!nftsForRent && (
         <div className="min-w-full min-h-full flex flex-col justify-center">
           <h1 className="text-center text-white text-3xl mb-16">
-            Ooops... Looks like there are no NFTs available to rent. Please
-            check back later or consider listing your NFT for others.
+            Oops... Looks like there are no NFTs available to rent. Please check
+            back later or consider listing your NFT for others.
           </h1>
           <Button>List your NFT</Button>
         </div>
