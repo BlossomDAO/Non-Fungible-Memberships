@@ -9,12 +9,12 @@ export default function Header() {
     console.log("Clicked");
   };
   return (
-    <div className="flex flex-row justify-between items-center m-4">
+    <div className="flex flex-row justify-between items-center py-4">
       <Link href="/">
-        <Image src={Logo} alt="NFM Logo" height={100} />
+        <Image src={Logo} alt="NFM Logo" height={80} />
       </Link>
-      <div>
-        <Link href="/HowItWorks">
+      <div className="flex items-center w-full justify-end">
+        <Link href="#howItWorks">
           <a className="ml-8 text-white text-xl"> How It Works</a>
         </Link>
         <Link href="/explore">
