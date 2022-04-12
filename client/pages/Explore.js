@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import Image from "next/image";
-import randomNess from "@images/randomness.png";
-import doodle from "@images/doodle.png";
-import cryptoPunk from "@images/cryptopunk.png";
-import NFTCard from "@components/nftCard";
-import boredApp from "@images/bored-app.png";
-import userIcon from "@images/userIcon.png";
+import randomNess from "/public/images/randomness.png";
+import doodle from "/public/images/doodle.png";
+import cryptoPunk from "/public//images/cryptopunk.png";
+import NFTCard from "../components/nftCard";
+import boredApp from "/public/images/bored-app.png";
+import userIcon from "/public/images/userIcon.png";
 
 export default function Explore() {
   const dummyData = [
