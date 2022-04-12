@@ -1,8 +1,9 @@
-import Layout from "../components/Layout";
+import Layout from "@components/Layout";
 import { useForm } from "react-hook-form";
-import NFTCard from "../components/nftCard";
+import NFTCard from "@components/nftCard";
 import doodle from "@images/doodle.png";
 import userIcon from "@images/userIcon.png";
+import Button from "@components/button";
 
 export default function Rent() {
   const {
@@ -20,7 +21,7 @@ export default function Rent() {
   };
 
   return (
-    <Layout>
+    <>
       <div className="flex flex-col justify-center items-center ">
         <NFTCard {...nftInfo} />
         <h1 className="text-7xl text-white my-8">Rent your NFT</h1>
@@ -64,14 +65,13 @@ export default function Rent() {
             placeholder="0.2"
             {...register("depositFee")}
           />
-          <button
-            className=" bg-gradient-to-r from-grd-ltBlue to-grd-blue text-gray-800 font-mono text-2xl px-4 py-2 mt-8  rounded-full"
-            type="submit"
-          >
+          <Button>
             Rent your NFT
-          </button>
+          </Button>
         </form>
       </div>
-    </Layout>
+    </>
   );
 }
+
+Rent.Layout = Layout;

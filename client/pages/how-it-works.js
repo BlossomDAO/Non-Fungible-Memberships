@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "@components/Layout";
 
 export default function HowItWorks() {
   return (
-    <Layout>
+    <>
       <div className="flex flex-col justify-center items-center text-center">
         <h1 className="text-7xl text-white my-8">How It Works</h1>
         <p className="text-3xl text-white my-8">
@@ -32,6 +32,8 @@ export default function HowItWorks() {
           </p>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
+
+HowItWorks.Layout = Layout;
