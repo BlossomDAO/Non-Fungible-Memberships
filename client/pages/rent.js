@@ -31,21 +31,31 @@ export default function Rent() {
           <label className="text-transparent bg-clip-text bg-gradient-to-br from-white to-grd-blue">
             Enter the monthly fee
           </label>
+          {errors.monthlyFee && (
+            <span className="text-red-500 font-bold">
+              This field is required
+            </span>
+          )}
           <input
             className="my-4 text-2xl p-2"
             placeholder="0.05"
             {...register("monthlyFee", { required: true })}
           />
-          {errors.monthlyFee && <span>This field is required</span>}
+
           <label className="text-transparent bg-clip-text bg-gradient-to-br from-white to-grd-blue">
             How many months would you like to rent your NFT?
           </label>
+          {errors.rentalPeriod && (
+            <span className="text-red-500 font-bold">
+              This field is required
+            </span>
+          )}
           <input
             className="my-4 text-2xl p-2"
             placeholder="3"
             {...register("rentalPeriod", { required: true })}
           />
-          {errors.rentalPeriod && <span>This field is required</span>}
+
           <label className="text-transparent bg-clip-text bg-gradient-to-br from-white to-grd-blue">
             Deposit Fee (optional)
           </label>
