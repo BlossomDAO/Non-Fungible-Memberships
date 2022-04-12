@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ethImg from '@images/ethCurrency.png';
 
 const styles = {
   wrapper:
@@ -15,6 +16,7 @@ export default function NFTCard({
   owner,
   ownerImg,
   rentBtn,
+  price,
   width = 500,
 }) {
   return (
@@ -38,7 +40,19 @@ export default function NFTCard({
             </div>
           </div>
           {rentBtn && (
-            <div className="flex justify-end">
+            <div className={`flex ${price ? 'justify-between' : 'justify-end'} py-2`}>
+              { price &&
+              <div className='flex items-center'>
+                <Image 
+                  src={ethImg} 
+                  alt="ETH" 
+                  width={"20px"} 
+                  height={"30px"} 
+                  layout="fixed" 
+                />
+                <span className="ml-2">{price}ETH</span>
+              </div>
+              }
               <button className={styles.rentButton}>RENT</button>
             </div>
           )}

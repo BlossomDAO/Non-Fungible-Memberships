@@ -31,6 +31,7 @@ export default function Explore() {
             {categories.map((c) => (
               <Button
                 onClick={() => handleFilter(c)}
+                key={c.id}
                 className="mr-2 mb-2"
                 variant={filterBy === c ? "gradient" : "outline"}
               >
