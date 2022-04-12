@@ -13,6 +13,7 @@ export const dummyData = [
     owner: "0xc9b8....6837",
     rentBtn: true,
     ownerImg: userIcon,
+    price: 0.05
   },
   {
     id: 1,
@@ -22,6 +23,7 @@ export const dummyData = [
     owner: "Dooking",
     rentBtn: true,
     ownerImg: userIcon,
+    price: 0.05
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const dummyData = [
     owner: "jesterboxboy.eth",
     rentBtn: true,
     ownerImg: userIcon,
+    price: 0.05
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ export const dummyData = [
     owner: "jesterboxboy.eth",
     rentBtn: true,
     ownerImg: userIcon,
+    price: 0.05
   },
   {
     id: 5,
@@ -49,6 +53,7 @@ export const dummyData = [
     owner: "jesterboxboy.eth",
     rentBtn: true,
     ownerImg: userIcon,
+    price: 0.05
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ export const dummyData = [
     owner: "unionPAC",
     rentBtn: true,
     ownerImg: userIcon,
+    price: 0.05
   },
   {
     id: 7,
@@ -67,6 +73,7 @@ export const dummyData = [
     owner: "unionPAC",
     rentBtn: true,
     ownerImg: userIcon,
+    price: 0.05
   },
   {
     id: 8,
@@ -76,6 +83,7 @@ export const dummyData = [
     owner: "unionPAC",
     rentBtn: true,
     ownerImg: userIcon,
+    price: 0.05
   },
 ];
 export const categories = ["apes", "punks", "doodles", "toadz", "random"];

@@ -22,13 +22,13 @@ function MobileNav() {
  ring-1 ring-black ring-opacity-5 focus:outline-none text-gray-300 z-50"
         >
           <div className="flex flex-col space-y-3 p-4 text-left">
-            <Link href="#howItWorks">
+            <Link href="how-it-works">
               <a className=" text-white text-xl"> How It Works</a>
             </Link>
             <Link href="/explore">
               <a className=" text-white text-xl"> Explore</a>
             </Link>
-            <Link href="/borrow">
+            <Link href="/rent">
               <a className=" text-white text-xl"> Borrow</a>
             </Link>
             <button
