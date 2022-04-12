@@ -1,22 +1,89 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import DummyNFT from "../public/dummyNFT.svg";
 import Image from "next/image";
+import randomNess from "@images/randomness.png";
+import doodle from "@images/doodle.png";
+import cryptoPunk from "@images/cryptopunk.png";
+import NFTCard from "@components/nftCard";
+import boredApp from "@images/bored-app.png";
+import userIcon from "@images/userIcon.png";
 
 export default function Explore() {
   const dummyData = [
-    { id: 0, img: DummyNFT, category: "Apes" },
-    { id: 1, img: DummyNFT, category: "Apes" },
-    { id: 2, img: DummyNFT, category: "Apes" },
-    { id: 3, img: DummyNFT, category: "Punks" },
-    { id: 4, img: DummyNFT, category: "Punks" },
-    { id: 5, img: DummyNFT, category: "Punks" },
-    { id: 6, img: DummyNFT, category: "Creepz" },
-    { id: 7, img: DummyNFT, category: "Apes" },
-    { id: 8, img: DummyNFT, category: "Apes" },
-    { id: 9, img: DummyNFT, category: "Apes" },
+    {
+      id: 0,
+      category: "random",
+      nftImage: randomNess,
+      nftDesc: "Structured Randomness",
+      owner: "0xc9b8....6837",
+      rentBtn: true,
+      ownerImg: userIcon,
+    },
+    {
+      id: 1,
+      category: "doodles",
+      nftImage: doodle,
+      nftDesc: "Doodle #7568",
+      owner: "Dooking",
+      rentBtn: true,
+      ownerImg: userIcon,
+    },
+    {
+      id: 3,
+      category: "punks",
+      nftImage: cryptoPunk,
+      nftDesc: "CryptoPunk #6764",
+      owner: "jesterboxboy.eth",
+      rentBtn: true,
+      ownerImg: userIcon,
+    },
+    {
+      id: 4,
+      category: "punks",
+      nftImage: cryptoPunk,
+      nftDesc: "CryptoPunk #6765",
+      owner: "jesterboxboy.eth",
+      rentBtn: true,
+      ownerImg: userIcon,
+    },
+    {
+      id: 5,
+      category: "punks",
+      nftImage: cryptoPunk,
+      nftDesc: "CryptoPunk #6764",
+      owner: "jesterboxboy.eth",
+      rentBtn: true,
+      ownerImg: userIcon,
+    },
+    {
+      id: 6,
+      category: "apes",
+      nftImage: boredApp,
+      nftDesc: "Bored Ape Yacht Club #4291",
+      owner: "unionPAC",
+      rentBtn: true,
+      ownerImg: userIcon,
+    },
+    {
+      id: 7,
+      category: "apes",
+      nftImage: boredApp,
+      nftDesc: "Bored Ape Yacht Club #7291",
+      owner: "unionPAC",
+      rentBtn: true,
+      ownerImg: userIcon,
+    },
+    {
+      id: 8,
+      category: "apes",
+      nftImage: boredApp,
+      nftDesc: "Bored Ape Yacht Club #1291",
+      owner: "unionPAC",
+      rentBtn: true,
+      ownerImg: userIcon,
+    },
   ];
-  const categories = ["Apes", "Punks", "Creepz", "Toadz"];
+  const categories = ["apes", "punks", "doodles", "toadz", "random"];
 
   const [filterBy, setFilterBy] = useState("");
   const [nftData, setNFTData] = useState(dummyData);
@@ -62,7 +129,9 @@ export default function Explore() {
               </h1>
             )}
             {nftData.map((nft) => (
-              <Image src={nft.img} height={300} width={300} />
+              <div key={nft.id} className="mx-3">
+                <NFTCard {...nft} />
+              </div>
             ))}
           </div>
         </div>

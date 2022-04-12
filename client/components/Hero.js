@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import DummyNFT from "../public/dummyNFT.svg";
 import Link from "next/link";
 import NFTCard from "./nftCard";
 import boredApp from "@images/bored-app.png";
@@ -16,7 +14,7 @@ const nftInfo = {
 export default function Hero() {
   return (
     <div className="flex flex-col sm:flex-row px-0 sm:px-2 justify-between items-center w-full py-24">
-      <div className="flex flex-col pr-16">
+      <div className="flex flex-col pr-16 max-w-xl">
         <h1 className="font-mono text-6xl text-white mb-6">Rent An NFT</h1>
         <p className="font-mono text-xl text-white">
           NFM (Non-Fungible Memberships) are a smarter way to lend & rent NFT’s!
@@ -33,7 +31,6 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      {/* <Image src={DummyNFT} alt="Picture of an NFT" height={800} /> */}
       <NFTCard {...nftInfo} />
     </div>
   );
