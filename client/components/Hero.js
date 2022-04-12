@@ -1,15 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import NFTCard from "./nftCard";
-import boredApp from "@images/bored-app.png";
-import userIcon from "@images/userIcon.png";
-
-const nftInfo = {
-  nftImage: boredApp,
-  nftDesc: "Bored Ape Yacht Club #4291",
-  owner: "unionPAC",
-  ownerImg: userIcon,
-};
 
 export default function Hero() {
   return (
@@ -31,7 +21,7 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <NFTCard {...nftInfo} />
+     
     </div>
   );
 }
