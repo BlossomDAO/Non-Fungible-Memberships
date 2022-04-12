@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -22,7 +23,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="hidden md:flex w-full ">
-      <Image src={DummyNFT} alt="Picture of an NFT" height={600} width={700} />
+      <Image src="/dummyNFT.svg" alt="Picture of an NFT" height={600} width={700} />
       </div>
     </div>
   );

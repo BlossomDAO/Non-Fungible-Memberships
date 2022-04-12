@@ -84,7 +84,7 @@ const NFTCard = ({ title, src, price }) => {
               <p className="text-base text-gray-300">{price}</p>
             </div>
             <button className="bg-gradient-to-r from-grd-ltBlue to-grd-blue text-gray-800 font-mono text-sm px-4 py-2 rounded-full">
-              Buy Now
+              Rent Now
             </button>
           </div>
         </div>
