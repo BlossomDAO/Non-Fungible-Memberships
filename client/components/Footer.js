@@ -4,14 +4,14 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <section className="mt-20">
-      <hr className="mt-10" />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 py-10 text-gray-300">
+    <section className="md:mt-20">
+      <hr className="md:mt-10" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 px-6 xl:px-0 py-10 text-gray-300">
         <div className="space-y-4 text-xs text-gray-300">
           <div className="relative w-24 h-20">
             <Image src="/logo.svg" layout="fill" />
           </div>
-          <p className="text-base">Smarter way to lend & rent NFT’s!</p>
+          <p className="text-lg">Smarter way to lend & rent NFT’s!</p>
         </div>
 
         <div className="space-y-4 text-sm text-gray-300">
@@ -32,7 +32,7 @@ function Footer() {
         </div>
       </div>
       <hr className="mb-6" />
-      <div className="text-center text-white text-xl text-bold p-6">
+      <div className="text-left md:text-center text-white text-xl text-bold p-6">
       Made with ❤️ by BlossomDAO
     </div>
     </section>

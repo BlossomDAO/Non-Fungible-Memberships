@@ -9,12 +9,12 @@ export default function Home() {
       <Hero />
 
       {/* Trending Rentals */}
-      <div className="flex flex-col space-y-3">
+      <div className="flex flex-col space-y-3 px-4 xl:px-0">
         <p className="text-base text-gray-500">
           Most trending rentals of the day.
         </p>
-        <h2 className="text-5xl text-gray-200">Trending Rentals</h2>
-        <div className="grid grid-cols-4 gap-x-10 gap-y-5">
+        <h2 className="text-[2.5rem] md:text-5xl text-gray-200">Trending Rentals</h2>
+        <div className="grid grid-flow-col overflow-scroll scrollbar-hide xl:grid xl:grid-cols-4 gap-x-10 gap-y-5">
           <NFTCard title="NFT Title" price="0.55 Eth" />
           <NFTCard title="NFT Title" price="0.75 Eth" />
           <NFTCard title="NFT Title" price="0.85 Eth" />
@@ -24,10 +24,10 @@ export default function Home() {
 
       {/* How it works */}
       <div className="bg-secondary mt-20 px-6 py-10" id="howItWorks">
-        <p className="text-4xl text-white w-full text-center font-bold mb-14">
+        <p className="text-4xl text-white w-full md:text-center font-bold mb-14">
           Easy steps to lend & rent an NFT
         </p>
-        <div className="grid grid-cols-4 gap-x-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10 xl:gap-y-0">
           <Feature
             title="Browse Available NFTs"
             content="Browse our available NFTs to rent."
@@ -55,10 +55,10 @@ const Feature = ({ src, title, content }) => {
   return (
     <div className="flex flex-col space-y-2 ">
       <div className="flex flex-row space-x-2 items-end">
-        <div className="relative h-10 w-10">
+        <div className="relative h-14 w-14">
           <Image src="/dummyNFT.svg" layout="fill" />
         </div>
-        <p className="text-xl text-gray-400 font-bold">{title}</p>
+        <p className="text-xl text-gray-300 font-bold">{title}</p>
       </div>
 
       <div>
