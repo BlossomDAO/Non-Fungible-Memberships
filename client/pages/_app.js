@@ -10,12 +10,20 @@ const progress = new ProgressBar({
   delay: 100,
 });
 
+const Noop = ({children}) => <>{children}</>
+
 Router.events.on("routeChangeStart", progress.start);
 Router.events.on("routeChangeComplete", progress.finish);
 Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  const Layout = Component.Layout ?? Noop
+
+    return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
 export default MyApp

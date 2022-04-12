@@ -1,89 +1,10 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import randomNess from "@images/randomness.png";
-import doodle from "@images/doodle.png";
-import cryptoPunk from "@images/cryptopunk.png";
 import NFTCard from "@components/nftCard";
-import boredApp from "@images/bored-app.png";
-import userIcon from "@images/userIcon.png";
+import Button from "@components/button";
+import { dummyData, categories } from "@content/dummyNFT";
 
 export default function Explore() {
-  const dummyData = [
-    {
-      id: 0,
-      category: "random",
-      nftImage: randomNess,
-      nftDesc: "Structured Randomness",
-      owner: "0xc9b8....6837",
-      rentBtn: true,
-      ownerImg: userIcon,
-    },
-    {
-      id: 1,
-      category: "doodles",
-      nftImage: doodle,
-      nftDesc: "Doodle #7568",
-      owner: "Dooking",
-      rentBtn: true,
-      ownerImg: userIcon,
-    },
-    {
-      id: 3,
-      category: "punks",
-      nftImage: cryptoPunk,
-      nftDesc: "CryptoPunk #6764",
-      owner: "jesterboxboy.eth",
-      rentBtn: true,
-      ownerImg: userIcon,
-    },
-    {
-      id: 4,
-      category: "punks",
-      nftImage: cryptoPunk,
-      nftDesc: "CryptoPunk #6765",
-      owner: "jesterboxboy.eth",
-      rentBtn: true,
-      ownerImg: userIcon,
-    },
-    {
-      id: 5,
-      category: "punks",
-      nftImage: cryptoPunk,
-      nftDesc: "CryptoPunk #6764",
-      owner: "jesterboxboy.eth",
-      rentBtn: true,
-      ownerImg: userIcon,
-    },
-    {
-      id: 6,
-      category: "apes",
-      nftImage: boredApp,
-      nftDesc: "Bored Ape Yacht Club #4291",
-      owner: "unionPAC",
-      rentBtn: true,
-      ownerImg: userIcon,
-    },
-    {
-      id: 7,
-      category: "apes",
-      nftImage: boredApp,
-      nftDesc: "Bored Ape Yacht Club #7291",
-      owner: "unionPAC",
-      rentBtn: true,
-      ownerImg: userIcon,
-    },
-    {
-      id: 8,
-      category: "apes",
-      nftImage: boredApp,
-      nftDesc: "Bored Ape Yacht Club #1291",
-      owner: "unionPAC",
-      rentBtn: true,
-      ownerImg: userIcon,
-    },
-  ];
-  const categories = ["apes", "punks", "doodles", "toadz", "random"];
-
   const [filterBy, setFilterBy] = useState("");
   const [nftData, setNFTData] = useState(dummyData);
 
@@ -100,24 +21,21 @@ export default function Explore() {
 
   const nftsForRent = true;
   return (
-    <Layout>
+    <>
       {nftsForRent && (
         <div className="min-w-full min-h-full flex flex-col">
           <h1 className="text-center text-white text-3xl my-16">
             Wanna see some of these in your wallet?
           </h1>
-          <div className="flex justify-center py-8">
+          <div className="flex flex-wrap justify-center py-8">
             {categories.map((c) => (
-              <button
+              <Button
                 onClick={() => handleFilter(c)}
-                className={
-                  filterBy === c
-                    ? "bg-gradient-to-r from-grd-ltBlue to-grd-blue text-gray-800 font-mono text-2xl px-4 py-2 rounded-full"
-                    : " text-white font-mono text-2xl px-4 py-2 rounded-full border border-grd-ltBlue hover:border-grd-blue mx-2"
-                }
+                className="mr-2 mb-2"
+                variant={filterBy === c ? "gradient" : "outline"}
               >
                 {c}
-              </button>
+              </Button>
             ))}
           </div>
 
@@ -138,14 +56,14 @@ export default function Explore() {
       {!nftsForRent && (
         <div className="min-w-full min-h-full flex flex-col justify-center">
           <h1 className="text-center text-white text-3xl mb-16">
-            Ooops... Looks like there are no NFTs available to rent. Please
-            check back later or consider listing your NFT for others.
+            Oops... Looks like there are no NFTs available to rent. Please check
+            back later or consider listing your NFT for others.
           </h1>
-          <button className=" bg-gradient-to-r from-grd-ltBlue to-grd-blue text-gray-800 font-mono text-2xl px-4 py-2 rounded-full">
-            List your NFT
-          </button>
+          <Button>List your NFT</Button>
         </div>
       )}
-    </Layout>
+    </>
   );
 }
+
+Explore.Layout = Layout;
