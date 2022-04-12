@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/logo.svg";
+
+import MobileNav from "./MobileNav";
 
 export default function Header() {
   const handleWalletConnect = () => {
@@ -9,11 +11,13 @@ export default function Header() {
     console.log("Clicked");
   };
   return (
-    <div className="flex flex-row justify-between items-center m-4">
+    <div className="flex flex-row justify-between items-center py-4 px-1 md:px-2 lg:px-0">
       <Link href="/">
-        <Image src={Logo} alt="NFM Logo" height={100} />
+        <div className="relative h-20 w-40">
+          <Image src={Logo} alt="NFM Logo" layout="fill" />
+        </div>
       </Link>
-      <div>
+      <div className="hidden md:flex items-center w-full justify-end">
         <Link href="/how-it-works">
           <a className="ml-8 text-white text-xl"> How It Works</a>
         </Link>
@@ -30,6 +34,7 @@ export default function Header() {
           Connect Wallet
         </button>
       </div>
+      <MobileNav handleWalletConnect={handleWalletConnect} />
     </div>
   );
 }

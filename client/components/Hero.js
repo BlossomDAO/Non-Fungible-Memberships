@@ -14,22 +14,27 @@ const nftInfo = {
 
 export default function Hero() {
   return (
-    <div className="flex flex-col sm:flex-row px-0 sm:px-2 justify-between items-center w-full py-24">
-      <div className="flex flex-col max-w-xl">
-        <h1 className="font-mono text-6xl text-white mb-6">Rent An NFT</h1>
-        <p className="font-mono text-xl text-white">
-          NFM (Non-Fungible Memberships) are a smarter way to lend &amp; rent NFT’s!
+    <div className="flex flex-row justify-between items-center w-full">
+      <div className="flex flex-col max-w-5xl w-full px-4 xl:px-0 py-20 lg:py-0">
+        <h1 className="font-mono text-6xl text-white mb-6">Borrow An NFT</h1>
+        <p className="font-mono text-lg md:text-xl text-white ">
+          NFM (Non-Fungible Memberships) are a <br /> smarter way to lend & rent
+          NFT’s!
         </p>
-        <div className="flex flex-col sm:flex-row justify-start py-8">
+        <div className="flex flex-row space-x-8 py-8">
           <Link href="/explore">
             <Button className="mb-2 mr-4">Explore NFTs</Button>
           </Link>
           <Link href="/rent">
-            <Button variant="outline" className="mb-2">Rent your NFT</Button>
+            <Button variant="outline" className="mb-2">
+              Rent your NFT
+            </Button>
           </Link>
         </div>
       </div>
-      <NFTCard {...nftInfo} />
+      <div className="hidden md:flex w-full ">
+        <NFTCard {...nftInfo} />
+      </div>
     </div>
   );
 }

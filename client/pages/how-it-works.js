@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "@components/Layout";
+import HowTo from "@components/HowTo";
 
 export default function HowItWorks() {
   return (
@@ -32,6 +33,7 @@ export default function HowItWorks() {
           </p>
         </div>
       </div>
+      <HowTo />
     </>
   );
 }
