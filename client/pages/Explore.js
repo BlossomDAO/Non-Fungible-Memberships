@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import NFTCard from "@components/nftCard";
-import { dummyData, categories } from "@content/dummyNFT";
 import Button from "@components/button";
+import { dummyData, categories } from "@content/dummyNFT";
 
 export default function Explore() {
   const [filterBy, setFilterBy] = useState("");
