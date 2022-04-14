@@ -18,10 +18,12 @@ export default function NFTCard({
   rentBtn,
   price,
   width = 500,
+  height,
+  onClick,
 }) {
   return (
-    <div className={styles.wrapper}>
-      <Image src={nftImage} alt="NFT image" width={width} />
+    <div className={styles.wrapper} onClick={onClick}>
+      <Image src={nftImage} alt="NFT image" width={width} height={height}/>
       <div className={styles.contentContainer}>
         <div className={styles.contentBox}>
           <div className="flex justify-between">
